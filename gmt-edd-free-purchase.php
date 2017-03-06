@@ -8,7 +8,7 @@
  * Version: 1.0.0
  * Author: Chris Ferdinandi
  * Author URI: http://gomakethings.com
- * License: MIT
+ * License: GPLv3
  */
 
 
