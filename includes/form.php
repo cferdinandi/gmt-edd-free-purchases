@@ -22,6 +22,8 @@
 		$defaults = gmt_edd_free_metabox_defaults();
 		$details = wp_parse_args( $saved, $defaults );
 
+		if ( $details['enabled'] !== 'on' ) return;
+
 		// Status
 		$status = gmt_edd_free_get_session( 'gmt_edd_free_status', true );
 		$success = gmt_edd_free_get_session( 'gmt_edd_free_success', true );
