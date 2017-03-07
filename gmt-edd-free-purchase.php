@@ -5,7 +5,7 @@
  * Plugin URI: https://github.com/cferdinandi/gmt-edd-free-purchases/
  * GitHub Plugin URI: https://github.com/cferdinandi/gmt-edd-free-purchases/
  * Description: Let people purchase products through EDD just by supplying their email address.
- * Version: 1.1.0
+ * Version: 1.2.0
  * Author: Chris Ferdinandi
  * Author URI: http://gomakethings.com
  * License: GPLv3
