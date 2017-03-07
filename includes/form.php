@@ -28,6 +28,10 @@
 		$status = gmt_edd_free_get_session( 'gmt_edd_free_status', true );
 		$success = gmt_edd_free_get_session( 'gmt_edd_free_success', true );
 		$email = gmt_edd_free_get_session( 'gmt_edd_free_email', true );
+		if ( is_user_logged_in() && empty( $email ) ) {
+			$current_user = wp_get_current_user();
+			$email = $current_user->user_email;
+		}
 
 		// Make sure ID is provided
 		if ( is_null( $gmt_edd_free['id'] ) || $gmt_edd_free['id'] === '' ) return;
