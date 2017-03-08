@@ -52,7 +52,7 @@
 				'<label class="gmt-edd-free-label" for="gmt_edd_free_email">' . __( 'Email Address', 'gmt_edd_free' ) . '</label>' .
 				'<div class="row">' .
 					'<div class="grid-two-thirds">' .
-						'<input type="text" id="gmt_edd_free_email" name="gmt_edd_free_email" value="' . esc_attr( $email ) . '" placeholder="' . esc_attr( $gmt_edd_free['placeholder'] ) . '" required>' .
+						'<input type="email" id="gmt_edd_free_email" name="gmt_edd_free_email" value="' . esc_attr( $email ) . '" placeholder="' . esc_attr( $gmt_edd_free['placeholder'] ) . '" required>' .
 					'</div>' .
 					'<div class="grid-third">' .
 						'<button class="gmt-edd-free-btn">' . $gmt_edd_free['label'] . '</button>' .
