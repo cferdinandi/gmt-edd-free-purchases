@@ -85,6 +85,7 @@
 		$details = wp_parse_args( $saved, $defaults );
 		$referrer = gmt_edd_free_get_url();
 		$status = $referrer . '#gmt-edd-free-form-' . $_POST['gmt_edd_free_id'];
+		$email = filter_var( $_POST['gmt_edd_free_email'], FILTER_VALIDATE_EMAIL );
 
 		// Make sure form has an ID
 		if ( !isset( $_POST['gmt_edd_free_id'] ) ) {
@@ -118,7 +119,7 @@
 		}
 
 		// If email is invalid
-		if ( empty( filter_var( $_POST['gmt_edd_free_email'], FILTER_VALIDATE_EMAIL ) ) ) {
+		if ( empty( $email ) ) {
 			gmt_edd_free_set_session( 'gmt_edd_free_status', $details['alert_bad_email'], 'post' );
 			gmt_edd_free_set_session( 'gmt_edd_free_email', $_POST['gmt_edd_free_email'], 'post' );
 			wp_safe_redirect( $status, 302 );
